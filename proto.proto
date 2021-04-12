@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package atmz.web.issuance;
+
+service DCRedemptionManagerService {    
+    rpc GetTimeStream(Empty) returns (stream TimeStreamResponse);
+}
+
+message Empty {
+}
+
+message TimeStreamResponse {
+    string result = 1;
+}
